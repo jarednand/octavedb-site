@@ -246,9 +246,13 @@ export default function OctaveDBSite() {
               <div className="bg-slate-900 border border-slate-800 rounded-lg p-4 overflow-x-auto">
                 <pre className="text-sm text-slate-300 font-mono whitespace-pre">
                   <code className="text-violet-400">{'import'}</code>
-                  <code>{' { db, makeResource, makeDateTime } '}</code>
+                  <code>{' { makeResource, makeDateTime } '}</code>
                   <code className="text-violet-400">{'from'}</code>
                   <code className="text-emerald-300">{" 'octavedb';\n"}</code>
+                  <code className="text-violet-400">{'import'}</code>
+                  <code>{' { db } '}</code>
+                  <code className="text-violet-400">{'from'}</code>
+                  <code className="text-emerald-300">{" './lib/db';\n"}</code>
                   <code className="text-violet-400">{'import type'}</code>
                   <code>{' { User } '}</code>
                   <code className="text-violet-400">{'from'}</code>
