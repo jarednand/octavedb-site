@@ -378,7 +378,7 @@ export default function OctaveDBSite() {
               <div className="bg-slate-950 rounded-lg p-3 text-sm font-mono text-slate-300">
                 <code className="text-violet-400">const</code>
                 <code>{' user = makeResource({ username: '}</code>
-                <code className="text-emerald-300">{"'john'"}</code>
+                <code className="text-emerald-300">{"'johndoe'"}</code>
                 <code>{' });'}</code>
               </div>
             </div>
