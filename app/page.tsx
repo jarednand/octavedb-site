@@ -403,18 +403,33 @@ export default function OctaveDBSite() {
             A TypeScript-first JSON database for local development
           </p>
           <div className="flex justify-center gap-6 text-sm">
-            <a href={githubUrl} className="text-slate-400 hover:text-violet-400 transition-colors">
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-violet-400 transition-colors"
+            >
               GitHub
             </a>
-            <a href={npmUrl} className="text-slate-400 hover:text-violet-400 transition-colors">
+            <a
+              href={npmUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-violet-400 transition-colors"
+            >
               npm
             </a>
-            <a href={`${githubUrl}/issues`} className="text-slate-400 hover:text-violet-400 transition-colors">
+            <a
+              href={`${githubUrl}/issues`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-400 hover:text-violet-400 transition-colors"
+            >
               Issues
             </a>
           </div>
           <p className="text-slate-500 text-xs mt-6">
-            MIT License © 2025
+            MIT License © {new Date().getFullYear()}
           </p>
         </div>
       </footer>
