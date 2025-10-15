@@ -123,7 +123,7 @@ export default function OctaveDBSite() {
               </div>
               <h3 className="text-xl font-semibold mb-2">Easy to Debug</h3>
               <p className="text-slate-400 text-sm">
-                It's just JSON! Open the file in any text editor to see exactly what's stored. No need for database clients or query tools to inspect your data.
+                {"It's just JSON! Open the file in any text editor to see exactly what's stored. No need for database clients or query tools to inspect your data."}
               </p>
             </div>
 
