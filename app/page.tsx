@@ -161,7 +161,8 @@ export default function OctaveDBSite() {
                   <code className="text-violet-400">{'import'}</code>
                   <code>{' { Resource } '}</code>
                   <code className="text-violet-400">{'from'}</code>
-                  <code className="text-emerald-300">{" 'octavedb';\n\n"}</code>
+                  <code className="text-emerald-300">{" 'octavedb'"}</code>
+                  <code>{';\n\n'}</code>
                   <code className="text-violet-400">{'export interface'}</code>
                   <code className="text-sky-300">{' User '}</code>
                   <code className="text-violet-400">{'extends'}</code>
@@ -184,7 +185,14 @@ export default function OctaveDBSite() {
                   <code>{';\n}\n\n'}</code>
                   <code className="text-violet-400">{'export interface'}</code>
                   <code className="text-sky-300">{' Database '}</code>
-                  <code>{'{\n  users: User[];\n  posts: Post[];\n}'}</code>
+                  <code>{'{\n  users: '}</code>
+                  <code className="text-emerald-300">{'User[]'}</code>
+                  <code>{';\n  posts: '}</code>
+                  <code className="text-emerald-300">{'Post[]'}</code>
+                  <code>{';\n'}</code>
+                  <code>{'}'}</code>
+
+                  {/* <code>{'{\n  users: User[];\n  posts: Post[];\n}'}</code> */}
                 </pre>
               </div>
             </div>
@@ -221,17 +229,25 @@ export default function OctaveDBSite() {
                   <code className="text-violet-400">{'import'}</code>
                   <code>{' { createClient } '}</code>
                   <code className="text-violet-400">{'from'}</code>
-                  <code className="text-emerald-300">{" 'octavedb';\n"}</code>
+                  <code className="text-emerald-300">{" 'octavedb'"}</code>
+                  <code>{';\n'}</code>
                   <code className="text-violet-400">{'import type'}</code>
                   <code>{' { Database } '}</code>
                   <code className="text-violet-400">{'from'}</code>
-                  <code className="text-emerald-300">{" './types';\n\n"}</code>
+                  <code className="text-emerald-300">{" './types'"}</code>
+                  <code>{';\n\n'}</code>
                   <code className="text-violet-400">{'export const'}</code>
                   <code>{' db = createClient'}</code>
                   <code className="text-sky-300">{'<Database>'}</code>
                   <code>{'('}</code>
                   <code className="text-emerald-300">{"'./database.json'"}</code>
-                  <code>{');'}</code>
+                  <code>{');\n\n'}</code>
+                  <code className="text-slate-500">{'// Also export the helpers for convenience\n'}</code>
+                  <code className="text-violet-400">{'export'}</code>
+                  <code>{' { makeResource, makeDateTime, makeId } '}</code>
+                  <code className="text-violet-400">{'from'}</code>
+                  <code className="text-emerald-300">{" 'octavedb'"}</code>
+                  <code>{';'}</code>
                 </pre>
               </div>
             </div>
@@ -246,17 +262,15 @@ export default function OctaveDBSite() {
               <div className="bg-slate-900 border border-slate-800 rounded-lg p-4 overflow-x-auto">
                 <pre className="text-sm text-slate-300 font-mono whitespace-pre">
                   <code className="text-violet-400">{'import'}</code>
-                  <code>{' { makeResource, makeDateTime } '}</code>
+                  <code>{' { db, makeResource, makeDateTime } '}</code>
                   <code className="text-violet-400">{'from'}</code>
-                  <code className="text-emerald-300">{" 'octavedb';\n"}</code>
-                  <code className="text-violet-400">{'import'}</code>
-                  <code>{' { db } '}</code>
-                  <code className="text-violet-400">{'from'}</code>
-                  <code className="text-emerald-300">{" './lib/db';\n"}</code>
+                  <code className="text-emerald-300">{" './lib/db'"}</code>
+                  <code>{';\n'}</code>
                   <code className="text-violet-400">{'import type'}</code>
                   <code>{' { User } '}</code>
                   <code className="text-violet-400">{'from'}</code>
-                  <code className="text-emerald-300">{" './types';\n\n"}</code>
+                  <code className="text-emerald-300">{" './types'"}</code>
+                  <code>{';\n\n'}</code>
                   <code className="text-slate-500">{'// CREATE\n'}</code>
                   <code className="text-violet-400">{'function'}</code>
                   <code>{' createUser(username: '}</code>
@@ -377,7 +391,9 @@ export default function OctaveDBSite() {
               <p className="text-slate-400 text-sm mb-4">Creates a new resource with automatic id, createdAt, and updatedAt fields.</p>
               <div className="bg-slate-950 rounded-lg p-3 text-sm font-mono text-slate-300">
                 <code className="text-violet-400">const</code>
-                <code>{' user = makeResource({ username: '}</code>
+                <code>{' user = makeResource'}</code>
+                <code className="text-sky-300">{'<User>'}</code>
+                <code>{'({ username: '}</code>
                 <code className="text-emerald-300">{"'johndoe'"}</code>
                 <code>{' });'}</code>
               </div>
