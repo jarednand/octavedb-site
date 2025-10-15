@@ -5,6 +5,10 @@
   "private": true,
   "author": "Jared Nand",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jarednand/octavedb-site"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",

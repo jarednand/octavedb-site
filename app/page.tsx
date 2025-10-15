@@ -445,7 +445,7 @@ export default function OctaveDBSite() {
             </a>
           </div>
           <p className="text-slate-500 text-xs mt-6">
-            MIT License © {new Date().getFullYear()}
+            MIT License © {new Date().getFullYear()} Jared Nand
           </p>
         </div>
       </footer>
